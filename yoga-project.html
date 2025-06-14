@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yoga project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="yoga.css">
+</head>
+<body>
+  <header>
+
+    <!-- humberger -->
+     <div class="hamberger">
+       <i class="fa-solid fa-bars" data-visible="true"></i>
+            <i class="fa-solid fa-close" data-visible="false"></i>
+
+     </div>
+     <!-- desctop menu -->
+      <nav class="container desctop-menu">
+
+        <!-- left menu -->
+         <ul id="left-menu"  class="menus-link" >
+           <li><a href="">Our philosophy</a></li>
+          <li><a href="">houses</a></li>
+          <li><a href="">map</a></li>
+         </ul>
+         <h1>RetretM5</h1>
+         <ul id="right-menu"  class="menus-link">
+          <li><a href="">leisure</a></li>
+          <li><a href="">how to get there</a></li>
+          <li><a href="">contact us</a></li>
+         </ul>
+            </nav>
+         <!-- mobile menu -->
+          <nav class="mobile-menu" data-visible="false">
+            <div class="navigation">
+             <h1>RetretM5</h1>
+              <ul  class="menus-link">
+              <li><a href="">Our philosophy</a></li>
+              <li><a href="">houses</a></li>
+              <li><a href="">map</a></li>
+              <li><a href="">leisure</a></li>
+              <li><a href="">how to get there</a></li>
+              <li><a href="">contact us</a></li>
+         </ul>
+        <div class="mobile-menu-actions">
+          <a href="" class="btn-primary">book a room</a>
+          <a href=""class ="btn-secondary">write to us </a>
+        </div>
+         </div>
+          </nav>
+
+  </header>
+  <section class="hero">
+<div class="container">
+  <h1>YOU CANNOT DO YOGA
+YOGA IS YOUR NATURAL STATE</h1>
+ 
+</div>
+
+
+
+  </section>
+
+    <script>
+        const hamberger = document.querySelector('.hamberger');
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const icons = document.querySelectorAll("i");
+
+        hamberger.addEventListener("click", function (event) {
+            const isVisible = mobileMenu.getAttribute('data-visible');
+            if (isVisible == "true") {
+                // qari hiding
+                mobileMenu.setAttribute('data-visible', "false");
+                icons[0].setAttribute('data-visible', "true");
+                icons[1].setAttribute('data-visible', "false");
+            } else if (isVisible == "false") {
+                // soo bandhig showing
+                mobileMenu.setAttribute('data-visible', "true");
+                icons[0].setAttribute('data-visible', "false");
+                icons[1].setAttribute('data-visible', "true");
+            }
+        });
+
+
+    </script>
+</body>
+</html>
